@@ -1,0 +1,40 @@
+{
+  "projects": [
+    {
+      "id": 1,
+      "title": { 
+        "id": "Website Portofolio", 
+        "en": "Portfolio Website" 
+      },
+      "desc": {
+        "id": "Website pribadi dengan desain responsif dan animasi halus menggunakan React dan TailwindCSS.",
+        "en": "Personal website with responsive design and smooth animations using React and TailwindCSS."
+      },
+      "tech": ["React", "Tailwind", "Framer Motion"]
+    },
+    {
+      "id": 2,
+      "title": { 
+        "id": "Dashboard ERP", 
+        "en": "ERP Dashboard" 
+      },
+      "desc": {
+        "id": "Sistem ERP sederhana dengan grafik interaktif dan manajemen data menggunakan PostgreSQL dan Express.",
+        "en": "Simple ERP system with interactive charts and data management using PostgreSQL and Express."
+      },
+      "tech": ["Express", "PostgreSQL", "Chart.js"]
+    },
+    {
+      "id": 3,
+      "title": { 
+        "id": "Panel Kontrol IoT", 
+        "en": "IoT Control Panel" 
+      },
+      "desc": {
+        "id": "Dashboard untuk mengontrol perangkat IoT Arduino melalui API real-time.",
+        "en": "Dashboard to control Arduino IoT devices via real-time API."
+      },
+      "tech": ["Node.js", "Arduino", "WebSocket"]
+    }
+  ]
+}

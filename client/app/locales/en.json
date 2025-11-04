@@ -1,0 +1,19 @@
+{
+  "langCode": "en",
+  "intro": "Howdy! Meet your web developers who love creating modern, simple, and easy-to-use websites.",
+  "explore": "Explore!",
+  "aboutTitle": "About me.",
+  "aboutDesc": "Developing beautiful and functional websites is what I love doing, and that’s why I give my all in every new challenge.",
+  "myStack": "My Stack.",
+  "currently": "Currently.",
+  "learning": "Learning",
+  "building": "Building",
+  "exploring": "Exploring",
+  "learningText": "Next.js 15, Prisma, and advanced PostgreSQL queries",
+  "buildingText": "Personal Portfolio v3 and Arduino Smart Switch Simulator",
+  "exploringText": "Cloudflare R2 and edge deployment workflow",
+  "projectButton": "Project Showcase",
+  "projectsTitle": "Projects",
+  "viewProject": "View Project",
+  "noProjects": "No projects available at the moment."
+}

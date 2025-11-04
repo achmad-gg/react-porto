@@ -1,0 +1,20 @@
+{
+  "langCode": "id",
+  "intro": "Halo! Kenalan sama web developer yang suka bikin website modern, simpel, dan mudah dipakai.",
+  "explore": "Jelajahi!",
+  "aboutTitle": "Tentang saya.",
+  "aboutDesc": "Membuat website yang indah dan berfungsi dengan baik adalah hal yang saya sukai, dan itu sebabnya saya selalu memberikan yang terbaik di setiap tantangan baru.",
+  "myStack": "Teknologi saya.",
+  "currently": "Saat ini.",
+  "learning": "Belajar",
+  "building": "Membangun",
+  "exploring": "Mengeksplorasi",
+  "learningText": "Next.js 15, Prisma, dan query PostgreSQL tingkat lanjut",
+  "buildingText": "Portfolio pribadi v3 dan simulasi saklar pintar Arduino",
+  "exploringText": "Cloudflare R2 dan workflow deployment edge",
+  "projectButton": "Lihat Proyek",
+  "projectsTitle": "Proyek.",
+  "viewProject": "Lihat Proyek",
+  "noProjects": "Belum ada project untuk saat ini."
+
+}
