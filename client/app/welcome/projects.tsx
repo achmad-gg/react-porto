@@ -37,7 +37,6 @@ export function Projects() {
           {t("projectsTitle")}
         </h2>
 
-        {/* ✨ Kondisi jika kosong */}
         {projects.length === 0 ? (
           <p className="text-center text-white/60 italic">
             {t("noProjects") || "No projects available at the moment."}
@@ -66,7 +65,9 @@ export function Projects() {
                   ))}
                 </div>
                 <a
-                  href="#"
+                  href={p.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="inline-block mt-4 text-sm text-blue-400 hover:text-blue-300 transition-colors"
                 >
                   {t("viewProject")} →

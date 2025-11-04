@@ -39,14 +39,15 @@ app.get("/api/projects", (req, res) => {
     id: p.id,
     title: p.title?.[lang] || p.title?.id || "",
     desc: p.desc?.[lang] || p.desc?.id || "",
-    tech: p.tech || []
+    tech: p.tech || [],
+    link: p.link || ""
   }));
 
   res.json(projects);
 });
 
 app.post("/api/projects", (req, res) => {
-  const { title, desc, tech } = req.body; 
+  const { title, desc, tech, link } = req.body; 
   // title = { id: "...", en: "..." }
 
   const data = fs.existsSync(DATA_PATH)
@@ -58,6 +59,7 @@ app.post("/api/projects", (req, res) => {
     title,
     desc,
     tech,
+    link
   };
 
   data.projects.push(newProject);
