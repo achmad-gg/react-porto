@@ -44,11 +44,11 @@ export const Navbar: React.FC = () => {
       },
     },
     {
-      href: "#project",
-      label: lang === "en" ? "Project" : "Proyek",
+      href: "#projects",
+      label: lang === "en" ? "Projects" : "Proyek",
       onClick: (e: React.MouseEvent<HTMLAnchorElement>) => {
         e.preventDefault();
-        const project = document.getElementById("project");
+        const project = document.getElementById("projects");
         project?.scrollIntoView({ behavior: "smooth" });
       },
     },
