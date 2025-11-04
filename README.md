@@ -3,12 +3,6 @@
 Project ini adalah website portofolio pribadi yang dibangun menggunakan React (frontend) dan Express (backend).
 Fitur utama termasuk multi-language (EN/ID), daftar project dinamis, dan animasi UI modern.
 
-📁 Struktur Folder
-react-porto/
-│── client/        # Frontend React + Vite
-│── server/        # Backend Express + JSON storage
-└── README.md
-
 ✨ Features
 
 ✅ Multi-language (English & Indonesian)
@@ -19,21 +13,13 @@ react-porto/
 
 🛠 Tech Stack
 Frontend
-
 React + Vite
-
 TailwindCSS
-
 Framer Motion
-
 i18next (multi-language)
-
 Backend
-
 Node.js + Express
-
 CORS
-
 JSON file as DB
 
 ⚙️ Setup & Installation
