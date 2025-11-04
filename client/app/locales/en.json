@@ -15,5 +15,28 @@
   "projectButton": "Project Showcase",
   "projectsTitle": "Projects",
   "viewProject": "View Project",
-  "noProjects": "No projects available at the moment."
+  "noProjects": "No projects available at the moment.",
+  "projectsList": [
+    {
+      "id": 1,
+      "title": "ToDo App",
+      "desc": "Personal ToDo list application built with Flutter and Hive for local storage with lottie animations.",
+      "tech": ["Hive", "Flutter", "Lottie"],
+      "link": "https://github.com/achmad-gg/FlutterToDo"
+    },
+    {
+      "id": 2,
+      "title": "ERP Dashboard",
+      "desc": "Simple ERP system with interactive charts and data management using PostgreSQL and Express.",
+      "tech": ["Vue", "Express", "PostgreSQL"],
+      "link": ""
+    },
+    {
+      "id": 3,
+      "title": "Web Kanban Board",
+      "desc": "Web-based Kanban board application with drag-and-drop using Next.js and rechartjs.",
+      "tech": ["Next.js", "rechartjs", "Tailwind CSS"],
+      "link": "https://github.com/achmad-gg/nextjs-kanban"
+    }
+  ]
 }

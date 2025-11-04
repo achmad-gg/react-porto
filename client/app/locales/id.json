@@ -15,6 +15,28 @@
   "projectButton": "Lihat Proyek",
   "projectsTitle": "Proyek.",
   "viewProject": "Lihat Proyek",
-  "noProjects": "Belum ada project untuk saat ini."
-
+  "noProjects": "Belum ada project untuk saat ini.",
+  "projectsList": [
+    {
+      "id": 1,
+      "title": "Aplikasi Daftar Tugas",
+      "desc": "Aplikasi daftar tugas pribadi dibuat dengan Flutter dan Hive untuk penyimpanan lokal dengan Lottie animasi.",
+      "tech": ["Hive", "Flutter", "Lottie"],
+      "link": "https://github.com/achmad-gg/FlutterToDo"
+    },
+    {
+      "id": 2,
+      "title": "Dashboard ERP",
+      "desc": "Sistem ERP sederhana dengan grafik interaktif dan manajemen data menggunakan PostgreSQL dan Express.",
+      "tech": ["Vue", "Express", "PostgreSQL"],
+      "link": ""
+    },
+    {
+      "id": 3,
+      "title": "Papan Kanban Web",
+      "desc": "Website papan Kanban berbasis web dengan drag-and-drop menggunakan Next.js dan rechartjs.",
+      "tech": ["Next.js", "rechartjs", "Tailwind CSS"],
+      "link": "https://github.com/achmad-gg/nextjs-kanban"
+    }
+  ]
 }

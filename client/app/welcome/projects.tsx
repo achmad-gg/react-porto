@@ -3,17 +3,6 @@ import { useTranslation } from "react-i18next";
 
 export function Projects() {
   const { t } = useTranslation();
-  const [projects, setProjects] = useState<any[]>([]);
-
-  useEffect(() => {
-    const currentLang = localStorage.getItem("lang") || "en";
-    const API_URL = import.meta.env.VITE_API_URL;
-
-    fetch(`${API_URL}/api/projects?lang=${currentLang}`)
-      .then((res) => res.json())
-      .then((data) => setProjects(data))
-      .catch((err) => console.error("Error fetching projects:", err));
-  }, []);
 
   // scroll animation
   useEffect(() => {
@@ -30,6 +19,13 @@ export function Projects() {
     return () => observer.disconnect();
   }, []);
 
+  const projectList = t("projectsList", { returnObjects: true }) as {
+    title: string;
+    desc: string;
+    tech: string[];
+    link: string;
+  }[];
+
   return (
     <div className="relative min-h-screen py-16 text-white">
       <div className="container px-6 mx-auto md:px-16 lg:px-28">
@@ -37,13 +33,13 @@ export function Projects() {
           {t("projectsTitle")}
         </h2>
 
-        {projects.length === 0 ? (
+        {projectList.length === 0 ? (
           <p className="text-center text-white/60 italic">
             {t("noProjects") || "No projects available at the moment."}
           </p>
         ) : (
           <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
-            {projects.map((p, i) => (
+            {projectList.map((p, i) => (
               <div
                 key={i}
                 className="fade-up group p-6 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-sm hover:bg-white/10 transition-all duration-300"
