@@ -6,12 +6,19 @@ import {
   Scripts,
   ScrollRestoration,
 } from "react-router";
-
 import type { Route } from "./+types/root";
 import "./app.css";
 import { Footer } from "./components/Footer";
 import { Navbar } from "./components/Navbar";
 import { initI18n } from "../app/lib/i18n";
+import ReactGA from "react-ga4";
+import { useEffect } from "react";
+
+// Inisialisasi hanya sekali saat app dijalankan
+if (typeof window !== "undefined" && !window.GA_INITIALIZED) {
+  ReactGA.initialize("G-7Z314Y9PT1");
+  window.GA_INITIALIZED = true;
+}
 
 export const links: Route.LinksFunction = () => [
   { rel: "preconnect", href: "https://fonts.googleapis.com" },
@@ -48,6 +55,11 @@ export function Layout({ children }: { children: React.ReactNode }) {
 }
 
 export default function App() {
+  // Tracking pageview di setiap perubahan route
+  useEffect(() => {
+    ReactGA.send({ hitType: "pageview", page: window.location.pathname });
+  }, []);
+
   return (
     <>
       <Navbar />
@@ -88,4 +100,5 @@ export function ErrorBoundary({ error }: Route.ErrorBoundaryProps) {
   );
 }
 
+// Jalankan initI18n di luar React render
 await initI18n();
