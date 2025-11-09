@@ -14,6 +14,12 @@ import { initI18n } from "../app/lib/i18n";
 import ReactGA from "react-ga4";
 import { useEffect } from "react";
 
+declare global {
+  interface Window {
+    GA_INITIALIZED?: boolean;
+  }
+}
+
 // Inisialisasi hanya sekali saat app dijalankan
 if (typeof window !== "undefined" && !window.GA_INITIALIZED) {
   ReactGA.initialize("G-7Z314Y9PT1");
