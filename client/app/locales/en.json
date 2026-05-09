@@ -16,6 +16,8 @@
   "projectsTitle": "Projects",
   "viewProject": "View Project",
   "noProjects": "No projects available at the moment.",
+  "contactTitle": "Contact",
+  "footerSub" : "Crafting Digital Excellence",
   "projectsList": [
     {
       "id": 1,

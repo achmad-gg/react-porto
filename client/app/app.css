@@ -129,6 +129,10 @@
   font-family: "Playfair Display", serif;
 }
 
+.font-footer {
+  font-family: "Montserrat", sans-serif;  
+} 
+
 .my-heading {
   font-family: "Montserrat", sans-serif;
   font-size: 40px; /* default (tanpa breakpoint) */
