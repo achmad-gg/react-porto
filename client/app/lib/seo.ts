@@ -33,14 +33,14 @@ export const PAGE_META: Record<string, PageMeta> = {
     ogType: "website",
   },
   about: {
-    title: `About | ${SITE_CONFIG.name} — Frontend Developer`,
+    title: `About | ${SITE_CONFIG.name} — Website Developer`,
     description:
-      "Kenali lebih dekat Achmad Ghifari Ghazali — seorang Frontend Developer dengan keahlian React, Next.js, Vue.js, dan PostgreSQL. Lihat stack teknologi dan apa yang sedang saya kerjakan.",
+      "Kenali lebih dekat Ragil Achmad Habibu — seorang Website Developer dengan keahlian React, Next.js, Vue.js, dan PostgreSQL. Lihat stack teknologi dan apa yang sedang saya kerjakan.",
     path: "/#about",
     ogType: "profile",
   },
   projects: {
-    title: `Projects | ${SITE_CONFIG.name} — Frontend Developer`,
+    title: `Projects | ${SITE_CONFIG.name} — Website Developer`,
     description:
       "Daftar proyek pilihan Achmad: ToDo App Flutter, ERP Dashboard Vue/Express, dan Web Kanban Board Next.js. Kode sumber tersedia di GitHub.",
     path: "/#projects",
@@ -126,9 +126,9 @@ export const schemaPerson = {
   name: SITE_CONFIG.fullName,
   alternateName: SITE_CONFIG.name,
   url: SITE_CONFIG.url,
-  jobTitle: "Frontend Developer",
+  jobTitle: "Website Developer",
   description:
-    "Frontend Developer spesialisasi React, Next.js, Vue.js, dan PostgreSQL.",
+    "Website Developer spesialisasi React, Next.js, Vue.js, dan PostgreSQL.",
   image: `${SITE_CONFIG.url}/og-image.png`,
   sameAs: [SITE_CONFIG.github, SITE_CONFIG.linkedIn],
   knowsAbout: [
@@ -155,9 +155,9 @@ export function schemaItemList(projects: ProjectItem[]) {
   return {
     "@context": "https://schema.org",
     "@type": "ItemList",
-    name: `Proyek Portofolio ${SITE_CONFIG.fullName}`,
+    name: "Proyek Portofolio Achmad Ghifari Ghazali",
     description:
-      `Daftar proyek pilihan yang dikerjakan oleh ${SITE_CONFIG.fullName}.`,
+      "Daftar proyek pilihan yang dikerjakan oleh Achmad Ghifari Ghazali.",
     url: `${SITE_CONFIG.url}/#projects`,
     numberOfItems: projects.length,
     itemListElement: projects.map((p, index) => ({
