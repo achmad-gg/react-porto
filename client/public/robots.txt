@@ -1,0 +1,12 @@
+# robots.txt — AchmadGG Portfolio
+# Dibuat untuk mengizinkan semua crawler mengindeks seluruh halaman.
+
+# Izinkan semua crawler
+User-agent: *
+Allow: /
+
+# Blokir file build internal React Router (tidak perlu diindeks)
+Disallow: /build/
+
+# Lokasi Sitemap XML
+Sitemap: https://gg-achmad.vercel.app/sitemap.xml

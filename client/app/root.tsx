@@ -5,12 +5,14 @@ import {
   Outlet,
   Scripts,
   ScrollRestoration,
+  useLocation,
 } from "react-router";
 import type { Route } from "./+types/root";
 import "./app.css";
 import { Footer } from "./components/Footer";
 import { Navbar } from "./components/Navbar";
 import { initI18n } from "../app/lib/i18n";
+import { SITE_CONFIG } from "~/lib/seo";
 import ReactGA from "react-ga4";
 import { useEffect } from "react";
 
@@ -43,11 +45,24 @@ export const links: Route.LinksFunction = () => [
 
 export function Layout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en">
+    <html lang="id">
       <head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+        {/* Global SEO meta — per-page overrides melalui meta() di masing-masing route */}
+        <meta name="author" content={SITE_CONFIG.fullName} />
+        <meta name="theme-color" content="#0a0a0a" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="color-scheme" content="dark" />
+        <meta name="google-site-verification" content="CKh8gsHUV3y6pBfxjV78ieXTDjXS6ALSxICemPupESY" />
+
+        {/* Favicon & PWA icons */}
         <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+        <link rel="shortcut icon" href="/favicon.ico" />
+
+        {/* React Router 7 akan meng-inject title, description, canonical,
+            OG tags, dll dari meta() export di setiap route di sini */}
         <Meta />
         <Links />
       </head>
@@ -61,15 +76,20 @@ export function Layout({ children }: { children: React.ReactNode }) {
 }
 
 export default function App() {
-  // Tracking pageview di setiap perubahan route
+  const location = useLocation();
+
+  // Tracking pageview di setiap perubahan route (termasuk hash navigation)
   useEffect(() => {
-    ReactGA.send({ hitType: "pageview", page: window.location.pathname });
-  }, []);
+    ReactGA.send({
+      hitType: "pageview",
+      page: location.pathname + location.search,
+    });
+  }, [location.pathname, location.search]);
 
   return (
     <>
       <Navbar />
-      <main>
+      <main id="main-content">
         <Outlet />
       </main>
       <Footer />
