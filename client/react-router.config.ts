@@ -7,5 +7,5 @@ export default {
   // Prerender: React Router 7 akan me-render route berikut menjadi HTML statis
   // saat build. Sangat berguna untuk SEO — bot mendapat HTML penuh tanpa JS.
   // Untuk SPA murni (ssr: false) ini wajib; untuk SSR ini sebagai optimasi.
-  prerender: ["/"],
+  prerender: ["/", "/sitemap.xml"],
 } satisfies Config;
