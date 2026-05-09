@@ -27,4 +27,4 @@ export async function loader() {
       "Cache-Control": "public, max-age=3600",
     },
   });
-}
+}}
