@@ -56,6 +56,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <meta name="format-detection" content="telephone=no" />
         <meta name="color-scheme" content="dark" />
         <meta name="google-site-verification" content="CKh8gsHUV3y6pBfxjV78ieXTDjXS6ALSxICemPupESY" />
+        <meta name="msvalidate.01" content="45EF6EA967A5834F2C1B14404A68EFDD" />
 
         {/* Favicon & PWA icons */}
         <link rel="icon" href="/favicon.ico" type="image/x-icon" />
